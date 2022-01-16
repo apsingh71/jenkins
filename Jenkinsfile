@@ -20,6 +20,9 @@ pipeline {
             def message = 4 + 3 > 6 ? 'cool' : 'not cool'
             echo message
         }
+        sh """
+        docker build -t hello_world:0.1 --build-arg SSH_KEY="MY_SSH_KEY" .
+        """
       }
     }
       stage("test") {
@@ -27,6 +30,9 @@ pipeline {
           echo 'Testing the application ...'
           echo "Test Suite: ${params.TestSuite}"
           echo "Pipeline Environment: ${params.Environment}"
+          sh """
+          docker ps -a
+          """
         }
       }
 
