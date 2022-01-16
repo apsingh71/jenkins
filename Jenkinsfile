@@ -25,7 +25,7 @@ pipeline {
       stage("test") {
         steps {
           echo 'Testing the application ...'
-          echo '${TestSuite'
+          echo '${TestSuite}'
           echo '${Environment}'
         }
       }
