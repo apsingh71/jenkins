@@ -2,7 +2,7 @@ properties([
   parameters([choice(choices: ['Dev', 'QA', 'Stage', 'PreProd', 'Prod'], description: 'Drop Down to Select Environment to run test against', name: 'Environment'),
               choice(choices: ['eNB', 'Edge', 'CSO', 'Sanity', 'Regression'], description: 'Select test suite to run', name: 'TestSuite'),
               string(defaultValue: 'dev', description: 'Input automation branch to use (default: dev)', name: 'AutomationBranch', trim: true),
-              booleanParam(description: 'Select to update testrails with test results', name: 'UpdateTestRails')])
+              booleanParam(defaultValue: false, description: 'Select to update testrails with test results', name: 'UpdateTestRails')])
           ])
 
 pipeline {
