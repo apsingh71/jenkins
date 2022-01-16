@@ -21,7 +21,7 @@ pipeline {
             echo message
         }
         sh """
-          docker run -v /var/run/docker.sock:/var/run/docker.sock -v \$(which docker):\$(which docker) ubuntu bash
+           docker build -t hello_world:0.1 --build-arg SSH_KEY="MY_SSH_KEY" . && \
         """
       }
     }
@@ -31,8 +31,7 @@ pipeline {
           echo "Test Suite: ${params.TestSuite}"
           echo "Pipeline Environment: ${params.Environment}"
           sh """
-          docker build -t hello_world:0.1 --build-arg SSH_KEY="MY_SSH_KEY" . && \
-          docker ps -a
+             docker ps -a
           """
         }
       }
