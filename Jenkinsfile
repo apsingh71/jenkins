@@ -33,7 +33,7 @@ pipeline {
       stage("deploy") {
         steps {
           echo 'Deploying the application ...'
-          echo "Update Testrails: ${params.UpdateTestrails}"
+          echo "Update Testrails: ${params.UpdateTestRails}"
         }
       }
 
