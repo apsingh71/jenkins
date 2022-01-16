@@ -15,7 +15,7 @@ pipeline {
       steps {
         echo 'Building the application ...'
         echo 'Application built...'
-        echo '${Automation Branch}'
+        echo "Automation Branch: ${Automation Branch}"
         script {
             def message = 4 + 3 > 6 ? 'cool' : 'not cool'
             echo message
@@ -25,15 +25,15 @@ pipeline {
       stage("test") {
         steps {
           echo 'Testing the application ...'
-          echo '${TestSuite}'
-          echo '${Environment}'
+          echo "Test Suite: ${TestSuite}"
+          echo "Pipeline Environment: ${Environment}"
         }
       }
 
       stage("deploy") {
         steps {
           echo 'Deploying the application ...'
-          echo '${Update Testrails}'
+          echo "Update Testrails: ${Update Testrails}"
         }
       }
 
