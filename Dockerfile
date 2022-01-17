@@ -6,9 +6,9 @@ RUN apt-get update && apt-get install -y python3-pip
 
 RUN pwd
 
-COPY *.py .
+COPY *.py ./
 
-COPY *.txt .
+COPY *.txt ./
 
 ARG SSH_KEY
 
