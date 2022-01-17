@@ -10,6 +10,8 @@ COPY *.py ./
 
 COPY *.txt ./
 
+RUN ls -lat
+
 ARG SSH_KEY
 
 ENV SSH_KEY=$SSH_KEY
