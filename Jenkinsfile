@@ -31,7 +31,7 @@ pipeline {
           echo "Test Suite: ${params.TestSuite}"
           echo "Pipeline Environment: ${params.Environment}"
           sh """
-             docker ps -a;docker run hello_world:0.1 /bin/bash -c "cd /tmp; python hello_world.py words.txt"
+             docker ps -a;docker run hello_world:0.1 /bin/bash -c "cd /tmp; python countwords.py words.txt"
           """
         }
       }
