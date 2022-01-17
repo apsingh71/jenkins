@@ -21,7 +21,7 @@ pipeline {
             echo message
         }
         sh """
-           docker build -t hello_world:0.1 --build-arg SSH_KEY="MY_SSH_KEY" .
+           docker build -t hello_world:0.1 --build-arg SSH_KEY="MY_SSH_KEY.rsa" .
         """
       }
     }
