@@ -6,9 +6,9 @@ RUN apt-get update && apt-get install -y python3-pip
 
 RUN pwd
 
-COPY *.py ./tmp/
+COPY *.py /tmp/
 
-COPY *.txt ./tmp/
+COPY *.txt /tmp/
 
 RUN ls -lat
 
