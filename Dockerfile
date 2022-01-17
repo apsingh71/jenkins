@@ -16,4 +16,6 @@ ARG SSH_KEY
 
 ENV SSH_KEY=$SSH_KEY
 
-CMD ["python", "hello_world.py", "$SSH_KEY"]
+#CMD ["python", "hello_world.py", "$SSH_KEY"]
+
+CMD ["python", "countwords.py", "words.txt"]
