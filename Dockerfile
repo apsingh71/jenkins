@@ -8,4 +8,4 @@ RUN pwd
 
 COPY hello_world.py .
 
-RUN python hello_world.py "$SSH_KEY"
+RUN python hello_world.py $SSH_KEY
